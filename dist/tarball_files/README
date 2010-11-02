@@ -1,0 +1,50 @@
+Last.fm
+=======
+Last updated: 31-November-2007 (1.4.0)
+
+Firstly, sorry that this doesn't install very well under Linux. There are
+patches to prefixify the installation available from our public SVN repository.
+But if you build from this default install, it will be a self contained folder
+that you can just run from your home directory or something like that.
+
+
+Requirements
+------------
+libsamplerate
+libfftw
+libmad
+libgpod
+alsa-lib
+Qt 4.3
+
+
+Build
+-----
+./configure && make
+
+
+Running the program
+-------------------
+bin/last.fm.sh
+
+
+Installation
+------------
+You can install last.fm to its own prefix, and then copy the last.fm script to
+a bin directory in the path, and modify the script so the LD_LIBRARY_PATH is
+correct.
+
+This isn't tested though. You'd be better doing something like:
+
+    $ mv last.fm-x.x.x.x/bin /opt/last.fm
+    $ /opt/last.fm/last.fm.sh
+
+
+Troubleshooting
+---------------
+If the configure script or build fails, or the client doesn't work please
+complain, vocally and with malice at the client support forum:
+
+    http://www.last.fm/forum/
+
+Or you can email me <max@last.fm>

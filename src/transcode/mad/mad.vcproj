@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<VisualStudioProject
+	ProjectType="Visual C++"
+	Version="8.00"
+	Name="madtranscode"
+	ProjectGUID="{DA35F46F-6666-4B19-8545-D99C2D230B1E}"
+	RootNamespace="mad"
+	>
+	<Platforms>
+		<Platform
+			Name="Win32"
+		/>
+	</Platforms>
+	<ToolFiles>
+	</ToolFiles>
+	<Configurations>
+		<Configuration
+			Name="Debug|Win32"
+			OutputDirectory="$(SolutionDir)$(ConfigurationName)"
+			IntermediateDirectory="$(ConfigurationName)"
+			ConfigurationType="0"
+			CharacterSet="2"
+			>
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="qmake mad.pro&#x0D;&#x0A;nmake debug"
+				ReBuildCommandLine="qmake mad.pro&#x0D;&#x0A;nmake clean debug"
+				CleanCommandLine="nmake clean"
+				Output=""
+				PreprocessorDefinitions=""
+				IncludeSearchPath=""
+				ForcedIncludes=""
+				AssemblySearchPath=""
+				ForcedUsingAssemblies=""
+				CompileAsManaged=""
+			/>
+		</Configuration>
+		<Configuration
+			Name="Release|Win32"
+			OutputDirectory="$(SolutionDir)$(ConfigurationName)"
+			IntermediateDirectory="$(ConfigurationName)"
+			ConfigurationType="0"
+			CharacterSet="2"
+			WholeProgramOptimization="1"
+			>
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="qmake mad.pro&#x0D;&#x0A;nmake release"
+				ReBuildCommandLine="qmake mad.pro&#x0D;&#x0A;nmake clean&#x0D;&#x0A;nmake release"
+				CleanCommandLine=""
+				Output=""
+				PreprocessorDefinitions=""
+				IncludeSearchPath=""
+				ForcedIncludes=""
+				AssemblySearchPath=""
+				ForcedUsingAssemblies=""
+				CompileAsManaged=""
+			/>
+		</Configuration>
+	</Configurations>
+	<References>
+	</References>
+	<Files>
+		<File
+			RelativePath=".\mad.pro"
+			>
+		</File>
+		<File
+			RelativePath=".\madtranscode.cpp"
+			>
+		</File>
+		<File
+			RelativePath=".\madtranscode.h"
+			>
+		</File>
+		<File
+			RelativePath=".\RingBuffer.cpp"
+			>
+		</File>
+		<File
+			RelativePath=".\RingBuffer.h"
+			>
+		</File>
+	</Files>
+	<Globals>
+	</Globals>
+</VisualStudioProject>

@@ -1,0 +1,39 @@
+#!/usr/bin/make -f
+#
+#   debuild -i -us -uc -b
+
+include /usr/share/cdbs/1/rules/debhelper.mk
+include /usr/share/cdbs/1/rules/simple-patchsys.mk
+
+clean::
+
+build/lastfm::
+	PATH=/usr/lib/icecc/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/bin/X11 $(MAKE) -j8
+
+install/lastfm::
+	perl dist/i18n.pl
+	cp -R bin last.fm
+	cp -f debian/user*.png last.fm/data/icons
+	
+	rm last.fm/*.dll last.fm/*.lib
+	rm -rf `find last.fm -name .svn` last.fm/Resources last.fm/sqldrivers
+	rm last.fm/data/install_mac.png last.fm/data/about_mac.png last.fm/data/wizard_mac.png last.fm/data/icons/systray_mac.png
+	rm last.fm/data/icons/as.ico
+
+	rm -rf `find last.fm -name .svn`
+	
+	mkdir -p $(DEB_DESTDIR)/usr/lib/lastfm
+	mkdir -p $(DEB_DESTDIR)/usr/share
+	mkdir -p $(DEB_DESTDIR)/usr/bin
+	
+	mv last.fm/lib* $(DEB_DESTDIR)/usr/lib
+	mv last.fm/services/* $(DEB_DESTDIR)/usr/lib/lastfm
+	mv last.fm/extensions/* $(DEB_DESTDIR)/usr/lib/lastfm || true
+	mv last.fm/data $(DEB_DESTDIR)/usr/share/
+	mv $(DEB_DESTDIR)/usr/share/data $(DEB_DESTDIR)/usr/share/lastfm
+	mv last.fm/last.fm $(DEB_DESTDIR)/usr/bin
+	mv last.fm/last.reporter $(DEB_DESTDIR)/usr/bin
+	
+	install -D -p -o root -g root -m 644 debian/lintian $(DEB_DESTDIR)/usr/share/lintian/overrides/lastfm
+	mkdir -p $(DEB_DESTDIR)/usr/share/applications/kde
+	cp -a debian/lastfm.desktop $(DEB_DESTDIR)/usr/share/applications/kde/

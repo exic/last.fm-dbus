@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>Label</key> 
+    <string>fm.last.lastfmhelper</string>
+    <key>LowPriorityIO</key> 
+    <true/>
+    <key>Program</key> 
+    <string>%HELPERAPP%</string>
+    <key>ProgramArguments</key> 
+    <array><string>%HELPERAPP%</string></array>
+    <key>ServiceDescription</key> 
+    <string>Last.fm Helper Service</string>
+    <key>LSUIElement</key> 
+    <true/>
+    <key>CFBundleIconFile</key>
+    <string>lastfm.icns</string>
+  </dict>
+</plist>

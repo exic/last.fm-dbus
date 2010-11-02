@@ -1,0 +1,719 @@
+1.5.4 (23/2/09)
+-------------------------------------------------------------------------------
+* Vital modifications to radio architecture
+* Source release build fixes
+
+
+1.5.2 (15/7/08)
+-------------------------------------------------------------------------------
+* All-in-one langauge release
+
+
+1.5.1.30362 (29/5/08)
+-------------------------------------------------------------------------------
+* Japanese version
+
+
+1.5.1.30182 (28/5/08)
+-------------------------------------------------------------------------------
+* Added translations
+
+
+1.5.1.29527 (23/5/08)
+-------------------------------------------------------------------------------
+* Fixed "Give more feedback" option not having any effect
+
+
+1.5.1.29189 (22/5/08)
+-------------------------------------------------------------------------------
+* Fixed layout of Diagnostics dialog
+* Fix start client with iTunes option on mac when iPod scrobbling is disabled
+  (properly)
+* Win: Fixed old tracks reappearing in every iPod scrobbling attempt
+* Prevent multiple instances of Twiddly running in parallel
+* Fixed re-buffering when using proxy output
+
+
+1.5.1.27516 (16/5/08)
+-------------------------------------------------------------------------------
+* Fixed changing user account in the Settings dialog
+* Improved metadata caching behaviour
+* Mac: Restored Hide Dock Icon feature, as we solved the crash
+* Mac: Fixed Beach-ball-of-doom bug
+* Mac: Optimised iPod scrobbling by 14 times
+* Added a button for triggering iPod scrobbling manually in the Diagnostics Dialog
+* Added the option "Give more feedback" to the iPod settings
+* Win: Fixed broken auto updater
+* Better error handling in iPodScrobbler
+* Fix start client with iTunes option on mac when iPod scrobbling is disabled
+
+
+1.5.0.25618 (6/5/08)
+-------------------------------------------------------------------------------
+* Fixed iTunes crashing when upgrading firmware on OS X
+* Retrying when we get a playcount diff of 0 from iTunes
+
+
+1.5.0.24910 (30/4/08)
+-------------------------------------------------------------------------------
+* Fixed iTunes crash when playing track with iPod scrobbling turned off
+* Mac: fixed scrobbling of tracks with Unicode characters
+* Added translations
+
+
+1.5.0.23108 (17/4/08)
+-------------------------------------------------------------------------------
+* Fixed intermittent crash on startup (heap corruption)
+* iPod scrobbling notifications now off by default
+* Fixed bug where new tracks would never get iPod-scrobbled
+* Added safety check to prevent misscrobbles when switching from auto to manual
+* Make sure iPodScrobbler isn't launched too early for manual iPods
+* Fix sidebar ugliness on Linux
+
+
+1.5.0.21858 (9/4/08)
+-------------------------------------------------------------------------------
+* Fixed unsightly sidebar lines in Windows classic theme
+* Fixed Mac keyboard events issue properly
+* Fixed bug where radio would occasionally go silent
+* Fixed crash when opening options dialog for the second time
+* Plugged a few more holes in iPodScrobbler
+* Fixed iTunes crashing when plugging in iPod Touch
+* Fixed status bar not acknowledging successful iPod scrobbling
+* Enabling/disabling iPod scrobbling now works
+* Fixed failing iPod Touch detection
+* Fixed wiki Read More link for non-Ascii names
+* Prevent bad iPod scrobbles when uninstalling and reinstalling
+
+
+1.5.0.20777 (2/4/08)
+-------------------------------------------------------------------------------
+* Added support for manually managed iPods (almost complete)
+* Fixed issue which prevented VMware Fusion from getting keyboard events while
+  the client was running (#1276)
+* Check integrity of updates before installing them (#929)
+* Fixed button order in dialogs (#1404)
+* Switched to Qt 4.3.4
+* Fixed Add Player dialog in localised builds
+* Show notification when iPod is first detected
+* Fixed empty ghost entries in sidebar
+* Fixed potential crash/hang in iPodScrobbler when iTunes COM does not respond
+* Don't scrobble iPhones that have MobileScrobbler installed
+* Fixed handling of duplicates when queuing played tracks in iTunes plugin
+  when iTunes COM interface is disabled
+* Fixed big white sqaure on right-click in sidebar (Mac)
+* Tried fixing the sidebar not remembering its width once and for all
+* Removed Hide Dock Icon feature (Mac)
+* Submit pending iPod scrobbles after user switch
+* Fixed double separator in menu (Mac)
+* Fixed extensions showing up as user accounts
+* Fixed scrobble timer stopping at midnight
+* Improved radio streaming performance on Windows
+* Fixed sound cards being listed twice in Options (Win)
+* Hopefully fixed intermittent failure to handshake at startup
+* Fixed inconsistent margins in Options dialog
+
+
+1.5.0.19080 (19/3/08)
+-------------------------------------------------------------------------------
+* Fix for "entry point not found" message when installing
+* Fix for radio links not working
+* Fix for CrashReporter crashing when launched
+* Fix for iPod scrobbling preparation always happening in config wizard
+
+
+1.5.0.18515 (13/3/08)
+-------------------------------------------------------------------------------
+* Brand new system for iPod scrobbling using iTunes plugin instead of the
+  LastFMHelper
+* Fixed random Vista crash on startup
+* Improved proxy auto detection
+* Artist & album covers draggable
+
+
+1.4.2.58893 (2/11/07)
+-------------------------------------------------------------------------------
+* Japanese build.
+
+
+1.4.2.58376 (19/12/07)
+-------------------------------------------------------------------------------
+* Rebuilt Windows build with Qt 4.3.3
+
+
+1.4.2.58240 (17/12/07)
+-------------------------------------------------------------------------------
+* Fixed unpausing resetting scrobble timer
+* Fixed maximisation state being forgotten when restoring from tray-icon
+* Fixed proxy handling for authenticated proxies
+
+
+1.4.1.57778 (14/12/07)
+-------------------------------------------------------------------------------
+* Japanese build.
+
+
+1.4.1.57486 (13/12/07)
+-------------------------------------------------------------------------------
+* Fixed skipped radio tracks not getting scrobbled
+* Fixed crash when client receives a track from a media player during startup
+* Fixed crash when painting TrackProgressFrame
+* Fixed album links for when album information received from server
+* Fixed artist links for when artist information received from server
+* Fixed StopWatch timeout being inaccurate on slow machines which could cause
+  lost scrobbles
+* Fixed crash when track starts when login dialog is shown
+* Fixed bug where tag dialog no longer remembered sort order
+* Mac: Fixed hang when deleting user
+* Fixed proxy autodetection not working on first run
+* Fixed crash when receiving bad Http header
+* Fixed text overlaps in Options dialog for localised builds
+* Mac: selecting items from menu bar menu now pops window to the front
+* Fixed potential hang at shutdown
+* Diagnostics dialog now showing history of full fingerprints collected
+
+
+1.4.0.56174 (5/12/07)
+-------------------------------------------------------------------------------
+* Fixed helper not shutting down during autoupdate
+* Remove .svn files from autoupdate tarball
+
+
+1.4.0.56102 (5/12/07)
+-------------------------------------------------------------------------------
+* Fixed memory corruption bug in fingerprinter which could lead to bad
+  fingerprints getting submitted after a http request retry, or worse, crashing
+* Fixed URL encoding for clicking on artist/album images
+
+
+1.4.0.55842 (3/12/07)
+-------------------------------------------------------------------------------
+* Automatically update cached tracks in Diagnostics dialog
+* Mac: Don't crash if no soundcard is present
+* CrashReporter should not just hang if the server is down
+* Fixed first radio track not always scrobbling
+* Fixed tag dialog resetting sorting order on double-click
+* Last used tag dialog item type not remembered on cancel
+* Fix library import FAQ link for localised builds
+* The log file is called "Last.fm.log" on all platforms from now on
+
+
+1.4.0.55446 (29/11/07)
+-------------------------------------------------------------------------------
+* Requesting smaller avatar images for faster downloads / less traffic (#1057)
+* Fixed slow auto-completion in tag dialog (#1069)
+* Refreshing the Diagnostics dialog should not rehandshake scrobbler (#1091)
+* Fixed installing helper application for new users on OS X
+* Fixed potential hang at startup on AudioController initialisation
+* Fixed artist/album/tracks links with non-alpha characters for all platforms
+* Fixed the Tracks To Scrobble dialog
+* Fixed socket error 49 happening on the Mac
+* Fixed media library import prompt appearing for installs with no plugins
+* Fixed errors from radio subsystem not being propagated up to app
+* Fixed TagDialog OK button not getting enabled after double-clicking tags
+* Fixed memory leak in helper on Mac
+
+
+1.4.0.54936 (27/11/07)
+-------------------------------------------------------------------------------
+* Fixed crash caused by painting certain avatars in the sidebar (#1054)
+* Fixed Helper application preventing OS X from sleeping (#944)
+* Fixed several sidebar issues: Auto-scrolling during drag & drop, getting
+  stuck on dropping an item, own user avatar shouldn't be draggable
+* Fixed listening for incoming connections on all interfaces
+* Disabled horizontal scrolling in the sidebar (#1056)
+* Only scrobble music & music-videos from iPod (#1025)
+* Fixed now playing information not being reset after switching users (#1087)
+* Fixed track progress bar being updated during station change (#1039)
+* Mac: Fixed two icons appearing in dock (again)
+* Mac: Fixed option for turning off dock icon
+* Win: Fixed potential hang bug when radio changes track
+* Handle 404 in autoupdates properly
+
+
+1.4.0.54514 (23/11/07)
+-------------------------------------------------------------------------------
+* Fixed config wizard appearing on each startup on Vista
+* Fixed download artist and image data option when restoring main window
+* Optimised tag dialog
+* Fixed some comma handling issues in tag dialog
+* Fixed bug where stopping/starting radio would lead to previous track
+  resuming while showing metadata for the new one
+* Radio now retries the next track on all streamer errors instead of erroring
+  out
+* Autostart Mac client after autoupdate
+* Fixed X11 apps losing focus on Mac
+* Remove "Enable iPod" checkbox on Mac because the helper not running will also
+  cause autolaunching with iTunes to break
+* Fixed possible Mac crash on startup
+* Fixed artist/album/tracks links with non-alpha characters
+* Fixed flickering on station and track changes
+* Possible fix for sidebar not remembering its width properly
+* Fixed clearing of record label link on track change
+* Possible fix for changing soundcard hang
+
+
+1.4.0.53303 (15/11/07)
+-------------------------------------------------------------------------------
+* Disabled manual iPod for Win and Mac, postponed to 1.5
+* Added avatars to neighbours in sidebar
+* Now Playing view no longer retaining old metadata when playing track without
+  ID3 tags
+* Fixed flickering when changeing station
+* Mac: Leopard fixes (intermittent font rendering bug still unsolved)
+
+
+1.4.0.52528 (9/11/07)
+-------------------------------------------------------------------------------
+* MSN Now Playing notification extension (Windows)
+* Option to disable systray icon
+* Mini avatars of friends in sidebar
+* Fixed Remove From Profile in Recently Played
+* Fixed loving/banning/tagging of tracks with & in them from sidebar
+* Fixed dual submission of scrobbles which made spam protection message appear
+* Fixed language detection on Mac
+* Fixed OK button not always closing Options dialog
+* Added more actions to systray menu
+* Old cache items automatically cleared
+* Fixed client not launching with iTunes (Mac)
+* Fixed Growl dialog popping up on each track change (Mac)
+* Fixed bad border on default album art
+* Fixed bug where plugins wouldn't install on Vista
+* Fixed discovery mode being enabled for non-subscribers
+* Fixed missing translations in menu bar
+* Fixed URLs with double slashes in them
+* Fixed crash bug on restart
+* Fixed launching radio station from the site with client running
+
+
+1.4.0.0 (2/11/07)
+-------------------------------------------------------------------------------
+* Collects fingerprints for all locally played tracks
+* Manual iPod support added for Mac and Linux (Windows still to be bugfixed)
+* Can now import listening history from Winamp media library
+* Can now import listening history from WMP media library
+* Switched to libmad for MP3 playback, fixing the intermittent white noise bug
+* Fix for noisy playback at start of radio tracks on Linux
+* Tag dialog improvements (search as you type etc)
+* Proxy autodetection on all platforms
+* Localisation fixes
+* Option to disable iPod support (i.e. LastFMHelper) added
+* Diagnostics dialog added to Help menu
+
+
+1.3.2.14
+-------------------------------------------------------------------------------
+* If a removable drive is set not to scrobble, don't refuse to scrobble
+  everything if that drive is removed.. ;)
+
+
+1.3.2.13 (18/9/07)
+-------------------------------------------------------------------------------
+* Fixed crash bug on startup (Mac)
+* Fixed bug where Now Playing screen wasn't automatically switching back
+  to Tune In when stopping a track in a local media player
+* Fixed jumping volume bar
+* Fixed web links in Swedish version
+
+
+1.3.2.12 (13/9/07) (JP only)
+-------------------------------------------------------------------------------
+* Fixed playlist not hidden bug
+
+
+1.3.2.11 (12/9/07)
+-------------------------------------------------------------------------------
+* Toolbar button changes
+* Added some missing translations
+
+
+1.3.2.10 (11/9/07)
+-------------------------------------------------------------------------------
+* Added Japanese translation
+* Fixed radio redirect bug (really)
+
+
+1.3.2.9 (31/08/07)
+-------------------------------------------------------------------------------
+* Updated translations
+* Fixed radio redirect bug
+
+
+1.3.2.6 (24/08/07)
+-------------------------------------------------------------------------------
+* Fixed installation of plugins to non-existing folder on Vista
+
+
+1.3.2 (13/08/07)
+-------------------------------------------------------------------------------
+* App no longer requires administrator rights on Vista, only installation
+  tasks will prompt for elevation
+* Better crash reporting system
+* Add to Playlist button added to toolbar
+* Manual bootstraps added
+* Record label link clickable
+* Now playing request delayed to prevent repeated skipping from sending
+  Now Playing submissions
+
+
+1.3.1 (11/07/07)
+-------------------------------------------------------------------------------
+* Fix for potential hang in QHttp.
+* Option to turn off app launching with iTunes on the Mac
+* Timezone hint added to "wrong clock" dialog
+* Fix for proxy dialog not appearing in config wizard
+* Now adapts to system language at startup on Mac
+* Scrobble caches now convert from 1.1.3 successfully 
+* New languages Swedish and Turkish
+* All URLs now localised
+
+
+1.3.0 (22/06/07)
+-------------------------------------------------------------------------------
+* New radio architecture with separate thread for streaming
+* Radio submissions made consistent with scrobbler submissions
+* Moved to scrobbling protocol 1.2 with Now Playing notifications
+* iPod support
+* iTunes collection bootstrapping support
+* Sidebar fixes and improvements
+* Tabs gone and screen switching managed automatically
+* Reworked menu and shortcuts
+* Growl support on the Mac
+* Initial fixes to run on Vista without dying
+* Dock icon optional on Mac
+* Track bar tells you why a track won't scrobble
+* Currently playing track displayed in window title/task bar
+* lastfm:// links can be entered into search field on Tune In tab
+* Reset tag cloud by hitting Search on Tune In tab with search field empty
+* App launches automatically with iTunes on the Mac
+* Web requests tightened up with automatic timeout/retry handling and more
+  informative errors
+* Tag dialog lists now sortable
+
+
+1.1.3.0 (23/01/07)
+-------------------------------------------------------------------------------
+* Minor bug fixes.
+
+
+1.1.2.0 (19/01/07)
+-------------------------------------------------------------------------------
+* Localisation fixes only.
+
+
+1.1.1.0 (10/01/07)
+-------------------------------------------------------------------------------
+* Fixed scrobbling of tracks with Asian characters (Mac).
+* Fixed crash when opening stream in iTunes (Mac).
+* Added language switch in Options.
+* Fixed some overlaps in localised versions.
+
+
+1.1.0.0 (13/12/06)
+-------------------------------------------------------------------------------
+* Disabled iPod and bootstrapping support for pre-Christmas release.
+* Copy changes.
+* Last.fm logo on Not Currently Listening screen made transparent.
+* iTunes scrobbling on Mac changed to an event-based system to prevent GUI
+  thread from hanging. (#365)
+* Fixed crash when skipping lots of tracks fast in media player. (#351)
+* Also reset window position if below 0.
+* Fixed cut-off toolbar labels under Win classic.
+* Fixed disappearing user avatar.
+* Added Skype plugin to installer.
+
+
+1.0.9.7 (4/12/06)
+-------------------------------------------------------------------------------
+* Fixed iPod detection problem. (#335)
+* Don't re-popup media device question if the user answered no. (#363)
+* Fixed default systray icon on Mac. (#349)
+* Copy changes and visual fixes.
+
+
+1.0.9.6 (29/11/06)
+-------------------------------------------------------------------------------
+* Fixed issues with iPod-scrobbling in shuffle-mode. (#334)
+* Only import the iTunes library initially, if we really need it. (#341)
+* Removed hardcoded challenge from web service.
+* Fixed splitter handle width on Mac on upgrade. (#343)
+* Fixed intermittent failure of transmitting all metadata from iTunes to app.
+  (Mac). (#328)
+* Fixed case-sensitive sorting of friends list.
+* Switch to Now Playing tab on every station launch.
+
+
+1.0.9.5 (23/11/06)
+-------------------------------------------------------------------------------
+* Moving the application to the trash crashed Finder on OS X. (#306)
+* Fix badly formatted text when dragging the current song-title. (#248)
+* Don't open browser twice when clicking on a link on OS X. (#317)
+* Show user items in the OS X tray-menu. (#290)
+* Let the users clear their history. (#79)
+* Show proper station names in the history. (#224)
+* Fix flickering on Windows during a Drag'n'Drop action.
+* Let users bootstrap an account with their existing iTunes Media Library.
+* Fix auto-update wizard for Mac systems.
+* Fixed unreliable user image on user switch (#305)
+* Fixed bad resizing of user image. (#293)
+* Fixed broken exclusion directories. (#325)
+* Fixed signup/forgotten password links.
+* Added tooltips and status bar messages on hovering over draglabels. (#134)
+* Metadata should no longer get mixed up when skipping a lot (#231)
+* Visual tweaks.
+
+
+1.0.9.4 (10/11/06)
+-------------------------------------------------------------------------------
+* Fix resuming stations on startup. (#269)
+* Fixed crash when dragging an item from the sidebar.
+* LastFMHelper was creating invalid submission caches which stopped iPod
+  scrobbling from working.
+* Fixed bad URL encoding when retrieving user's tags for the tag dialog when
+  names contained ampersands or other special chars. (#272)
+* Fixed bad URL encoding for links with special chars in Now Playing tab.
+* Fixed occassional missing track names from Now Playing tab.
+* Right clicking on images should not go to the web site.
+* Fixed bug that could cause tracks to get scrobbled to the wrong user profile.
+* Possible fix for RtAudio crash bug.
+* Visual tweaks.
+
+
+1.0.9.3 (8/11/06)
+-------------------------------------------------------------------------------
+* Added missing QSqlite so that storing the iPod scrobbles will work.
+* Fixed album title not showing up when in ID3 but not in moderated data.
+* Visual fixes.
+
+
+1.0.9.2 (6/11/06)
+-------------------------------------------------------------------------------
+* Sort users and tags in the sidebar. (#273)
+* Fixed window appearing off-screen bug. (#239)
+* Set reasonable min and default window sizes.
+* Fixed launching of stations from search tab.
+* Config wizard now waits for handshake after login screen so shouldn't get
+  the "no server set to connect to" error. (#173)
+
+
+1.0.9.1 (2/11/06)
+-------------------------------------------------------------------------------
+* Fixed config wizard crashing.
+* Visual tweaks.
+* Pausing the player no longer retains the track info in the app. (#245)
+* Fixed browser opening when recommending by dragging (Mac).
+* Clicking radio links in browser that leads to the app opening now works (Mac)
+  (#275).
+* iTunes should now not restart when closing it with app running (Mac) (#286).
+
+
+1.0.9.0 (1/11/06)
+-------------------------------------------------------------------------------
+* Visual redesign.
+* iPod scrobbling and iTunes bootstrapping support.
+* Fixed crash when playing track before a user has been entered in the 
+  configuration wizard.
+TODO: add all other bug fixes and enhancements
+
+
+1.0.7 (21/9/06)
+-------------------------------------------------------------------------------
+* Fixed installation of plugins to non-existing folder (Windows).
+
+
+1.0.6 (13/9/06)
+-------------------------------------------------------------------------------
+* Fixed scrobbling of special characters from iTunes (Mac).
+* Fixed potential port stepping problem (Mac).
+* Pausing, then skipping in iTunes no longer starts off new track in client
+  (Mac).
+* Now including symbols for more useful crash logs (Mac).
+* Fixed broken caching (Mac).
+* Scrobbler now submits path too (although there are some issues) (Mac).
+* Disabled systray icon state added for when scrobbling is turned off.
+* Disabled Config Wizard on Mac, all we need is the login dialog.
+
+
+1.0.5 (8/9/06)
+-------------------------------------------------------------------------------
+* Fixed insufficient Skip button feedback. (#128)
+* Changed play controls to be more responsive and merged Play/Stop.
+* Fixed tagging of items with &, < or > in them (#72)
+* Fixed item links with &, /, ;, +, # in them (#152)
+* Fixed hand cursor over Buy button (#92)
+* Included playing track in systray tooltip (#82)
+* Stopped Now Playing info from getting re-requested forever if playing
+  same track on the radio.
+* Stopped Now Playing info from getting re-requested forever if getting
+  stuck on one track.
+* Added option to turn metadata download off. (#19)
+* Added option to empty cache.
+* Fixed double initialisation bug (2 systray icons) when launched by double-
+  clicking a track and letting player launch app. (#178)
+* Hide "Similar to:" when no similar artists found. (#201)
+* Don't clear Now Playing fields if same artist/album (#207)
+* Clear Tune In tab search results when switching user
+* Go directly to Tune In tab after adding new user (#205)
+* Highlight direct tag search hit. (#208)
+* Fixed long file paths in cache directory.
+* Stopped app from crashing if no soundcard available.
+* Changed plugin installer to use short path on Windows.
+* Fixed crash on startup with no config present (Mac).
+* Fixed lastfm:// protocol association (Mac).
+
+
+1.0.4 (9/8/06)
+-------------------------------------------------------------------------------
+* Fixed proxy password not being retrieved properly.
+* Fixed encoding of URL for changing station which broke some radio modes
+  when behind a proxy.
+
+
+1.0.2 (3/8/06)
+-------------------------------------------------------------------------------
+* Changed shortcut for toggling the sidebar from ShortCut+M to ShortCut+F to
+  unblock ShortCut+M, which is usually "Minimize Window".
+* Define a minimum size for the Settings dialog. (#169)
+* Re-request metadata when server returns bad replies. (#165)
+* Fixed crash on entering proxy settings during first run. (#161)
+* Clearing proxy values in the failed login proxy dialog now also disables
+  proxy properly. (#167)
+* Usernames with spaces in them can now run the initial wizard. (#164)
+* Fix for Configuration Wizard putting the plugin in the wrong directory
+  when using non-standard player path. (#163)
+* If installing a version that is not the latest, no longer flashes up
+  Auto Update window during the Configuration Wizard. (#171)
+* Radio should now always obey scrobbling enabled/disabled switch. (#151)
+* Fixed crash when exiting app during a submission request. (#156)
+* Changed min length required for scrobbling to 31s to prevent iTunes
+  Music Store previews from scrobbling. (#149)
+* Discovery mode should no longer be ignored if set before starting
+  streaming. (#166)
+* Album names should no longer get cleared by retrieved metadata if
+  the metadata album field is empty. (#12)
+
+
+1.0.1 (21/7/06)
+-------------------------------------------------------------------------------
+* Prevent long song names overlapping "scrobbled"-status. (#132)
+
+
+1.0.0 (14/7/06) 
+-------------------------------------------------------------------------------
+* Fixed AutoUpdate hang.
+* Fixed Stop button in menus disabled.
+* Disabled username edit in Settings.
+
+
+0.3.12 RC1 (13/7/06) 
+-------------------------------------------------------------------------------
+* Now working on Windows 98. (#11)
+* Confirm dialog on first exit.
+
+
+0.3.11 (11/7/06)
+-------------------------------------------------------------------------------
+* Don't wipe existing tags when dropping an item on a tag. (#109)
+* Added labels to tag & recommend dialogs, improving usability.
+* Added confirm dialogs for operations.
+* Added "Not playing" screen.
+* Now clears custom station on play.
+* Fixed broken timebar.
+* Fixed sidebar state not remembered.
+* Fixed tagging album/track mismatch.
+* Fixed elusive proxy bug in Qt. (#104)
+
+
+0.3.10 (7/7/06)
+-------------------------------------------------------------------------------
+* Fix for config wizard hanging on getting plugin info. (#40)
+* Scrobble state made more visible.
+* Fixed Artist/Track/Album links. Again...
+
+
+0.3.9 (5/7/06)
+-------------------------------------------------------------------------------
+* Put in check for empty strings in exclusions list (should prevent tracks
+  from getting blocked erroneously). (#96)
+* If launched minimised and the Updates wizard appears, pressing Cancel no
+  longer shuts the app down.
+* Settings did not get saved out when app exited as part of an autoupdate. (#102)
+* Fixed broken Artist link. (#103)
+* Different colour user icons back in. (#107)
+* Added option to enable/disable discovery mode. (#60)
+* Select current page when opening settings dialog. (#4)
+* Fixed UTF-8 problems with Drag & Drop. (#65)
+* Clear the sidebar when re-handshaking. (#39)
+* Make sure the station info gets removed on disconnect. (#48)
+* Fixed play control buttons' state. (#112)
+* Remember last selection in tag & recommend dialog. (#10)
+* All functions now accessible from menus. (#43)
+* Added Scrobble button in status bar. (#93)
+* Let the user cancel radio-streaming operations. (#51)
+
+
+0.3.8 (3/7/06)
+-------------------------------------------------------------------------------
+* Fixed problem when tagging items with a comma in the name. (#72)
+* Buy links no longer go to betadev. (#87)
+* Windows shutdown does now close the app properly. (#54)
+* Fixed hang on getting plugin info during first run configuration wizard. (#40)
+* Let user drop lastfm:// urls on the application. (#5)
+* Don't crash horribly if services are missing. (#46)
+
+
+0.3.7 (29/6/06)
+-------------------------------------------------------------------------------
+* Fixed broken proxy support some more
+* Fixed scrobbler submitting failed song over and over in a loop
+* Fixed tab order in login dialog
+* Tentative fix for crashes when skipping
+* Fix for artist/track/album links going to the wrong page for scrobbled tracks
+* Fix for tracks not caching when starting app offline
+* Fixed problem with tagging albums & tracks and report tagging errors (#68)
+* Don't let the user enter invalid characters when tagging
+* Similar artists and tags in "Now Playing" are now clickable links (#25)
+
+
+0.3.6 (27/6/06)
+-------------------------------------------------------------------------------
+* Fixed broken proxy support.
+* Systray icon now gets removed on exit.
+* Probable fix for failures on paths with non-Latin characters.
+* Added "Recently Banned" to the sidebar.
+* Added missing corner logo to wizards.
+* Added GPL license to installer.
+* Added X icon.
+
+
+0.3.5 (26/6/06)
+-------------------------------------------------------------------------------
+* Handshakes now automatically pass correct version string.
+* Toolbar is now non-removable.
+* Added proper Play button to Tune in tab.
+* App now works properly on limited Windows account.
+* App no longer pops to the front when launching associated player application.
+* Fixed potential crash bug in mp3 transcoder.
+
+
+0.3.4 (23/6/06)
+-------------------------------------------------------------------------------
+* Fixed html-tags showing up in statusbar-messages.
+* Fixed Remove Friend not working.
+* Searched-for artist is now automatically selected.
+* Installer and wizard now have the correct corner images.
+
+
+0.3.3 (23/6/06)
+-------------------------------------------------------------------------------
+* Fixed slow menu bug. Second beta candidate.
+
+
+0.3.2 (22/6/06)
+-------------------------------------------------------------------------------
+* First beta candidate build.
+
+
+0.3.1 (21/6/06)
+-------------------------------------------------------------------------------
+* Test build.

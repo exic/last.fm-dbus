@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<VisualStudioProject
+	ProjectType="Visual C++"
+	Version="8.00"
+	Name="Cleaner"
+	ProjectGUID="{10C7460D-8172-4D33-B38A-91631449C4A3}"
+	RootNamespace="Cleaner"
+	Keyword="MakeFileProj"
+	>
+	<Platforms>
+		<Platform
+			Name="Win32"
+		/>
+	</Platforms>
+	<ToolFiles>
+	</ToolFiles>
+	<Configurations>
+		<Configuration
+			Name="Debug|Win32"
+			OutputDirectory="Debug"
+			IntermediateDirectory="Debug"
+			ConfigurationType="0"
+			InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC71.vsprops"
+			>
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="qmake Cleaner.pro&#x0D;&#x0A;nmake debug"
+				ReBuildCommandLine="qmake Cleaner.pro&#x0D;&#x0A;nmake clean&#x0D;&#x0A;nmake debug"
+				CleanCommandLine="nmake clean"
+				Output="..\..\bin\Cleanerd.exe"
+				PreprocessorDefinitions=""
+				IncludeSearchPath=""
+				ForcedIncludes=""
+				AssemblySearchPath=""
+				ForcedUsingAssemblies=""
+				CompileAsManaged=""
+			/>
+		</Configuration>
+		<Configuration
+			Name="Release|Win32"
+			OutputDirectory="Release"
+			IntermediateDirectory="Release"
+			ConfigurationType="0"
+			InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC71.vsprops"
+			>
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="qmake Cleaner.pro&#x0D;&#x0A;nmake release"
+				ReBuildCommandLine="qmake Cleaner.pro&#x0D;&#x0A;nmake clean&#x0D;&#x0A;nmake release"
+				CleanCommandLine="nmake clean"
+				Output="..\..\bin\Cleaner.exe"
+				PreprocessorDefinitions=""
+				IncludeSearchPath=""
+				ForcedIncludes=""
+				AssemblySearchPath=""
+				ForcedUsingAssemblies=""
+				CompileAsManaged=""
+			/>
+		</Configuration>
+	</Configurations>
+	<References>
+	</References>
+	<Files>
+		<Filter
+			Name="Make files"
+			>
+			<File
+				RelativePath=".\Cleaner.pro"
+				>
+			</File>
+			<File
+				RelativePath=".\Cleaner.rc"
+				>
+			</File>
+			<File
+				RelativePath=".\trustInfo.manifest"
+				>
+			</File>
+		</Filter>
+		<Filter
+			Name="Sources"
+			>
+			<File
+				RelativePath=".\Cleaner.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\Cleaner.h"
+				>
+			</File>
+			<File
+				RelativePath=".\main.cpp"
+				>
+			</File>
+		</Filter>
+	</Files>
+	<Globals>
+	</Globals>
+</VisualStudioProject>

@@ -1,0 +1,121 @@
+<ui version="4.0" >
+ <class>MediaDeviceConfirmWidget</class>
+ <widget class="QWidget" name="MediaDeviceConfirmWidget" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>326</width>
+    <height>262</height>
+   </rect>
+  </property>
+  <property name="sizePolicy" >
+   <sizepolicy vsizetype="MinimumExpanding" hsizetype="Preferred" >
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle" >
+   <string/>
+  </property>
+  <layout class="QVBoxLayout" >
+   <property name="spacing" >
+    <number>10</number>
+   </property>
+   <property name="leftMargin" >
+    <number>16</number>
+   </property>
+   <property name="topMargin" >
+    <number>16</number>
+   </property>
+   <property name="rightMargin" >
+    <number>16</number>
+   </property>
+   <property name="bottomMargin" >
+    <number>16</number>
+   </property>
+   <item>
+    <widget class="QLabel" name="topLabel" >
+     <property name="text" >
+      <string>Question</string>
+     </property>
+     <property name="wordWrap" >
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QVBoxLayout" >
+     <item>
+      <widget class="QRadioButton" name="yesButton" >
+       <property name="text" >
+        <string>Yes, please.</string>
+       </property>
+       <property name="checked" >
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="noButton" >
+       <property name="text" >
+        <string>No, thanks.</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <spacer>
+     <property name="orientation" >
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeType" >
+      <enum>QSizePolicy::Fixed</enum>
+     </property>
+     <property name="sizeHint" >
+      <size>
+       <width>20</width>
+       <height>8</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item>
+    <widget class="QLabel" name="label_2" >
+     <property name="text" >
+      <string>&lt;b>Note&lt;/b> that iTunes must be set to automatically sync the iPod for this to work.</string>
+     </property>
+     <property name="wordWrap" >
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="label" >
+     <property name="text" >
+      <string>Who is the owner of this iPod?</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QComboBox" name="userComboBox" />
+   </item>
+   <item>
+    <spacer>
+     <property name="orientation" >
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" >
+      <size>
+       <width>20</width>
+       <height>40</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,15 @@
+Official Last.fm Ubuntu Package
+===============================
+
+These files are taken from official debian/Ubuntu package, and adapted slightly
+as we don't want to be quite so imposing.
+
+--------------------------------------------------------------------------------
+
+Original authors:
+
+  Alberto Garcia <agarcia@igalia.com>
+  John Stamp <jstamp@users.sourceforge.net>
+
+--------------------------------------------------------------------------------
+Max Howell <max@last.fm>

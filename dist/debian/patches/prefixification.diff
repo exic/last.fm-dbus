@@ -1,0 +1,35 @@
+Index: src/container.cpp
+===================================================================
+--- src/container.cpp	(revision 53051)
++++ src/container.cpp	(working copy)
+@@ -485,7 +485,7 @@
+     // Hack to get it working with VS2005
+     QString path = qApp->applicationDirPath();
+   #else
+-    QString path = qApp->applicationDirPath() + "/extensions";
++    QString path = "/usr/lib/lastfm/";
+   #endif
+ 
+   #ifndef QT_NO_DEBUG
+Index: src/libMoose/MooseCommon.cpp
+===================================================================
+--- src/libMoose/MooseCommon.cpp	(revision 53051)
++++ src/libMoose/MooseCommon.cpp	(working copy)
+@@ -42,7 +42,7 @@
+ QString
+ dataPath( QString file )
+ {
+-    return QApplication::applicationDirPath() + "/data/" + file;
++    return "/usr/share/lastfm/" + file;
+ }
+ 
+ 
+@@ -107,7 +107,7 @@
+         // Hack to get it working with VS2005
+         dirPath = qApp->applicationDirPath();
+     #else
+-        dirPath = qApp->applicationDirPath() + "/services";
++        dirPath = "/usr/lib/lastfm";
+     #endif
+ 
+     #ifndef QT_NO_DEBUG

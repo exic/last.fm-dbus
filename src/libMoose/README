@@ -1,0 +1,4 @@
+Moose applications have a number of requirements:
+
+* They must reside in the SAME directory as the Last.fm executable.
+* A Logger instance must be created for logging to work.

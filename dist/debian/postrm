@@ -1,0 +1,8 @@
+#!/bin/sh
+
+[ -e /etc/mozilla-firefox/pref/lastfm.js ] && rm -f /etc/mozilla-firefox/pref/lastfm.js
+[ -e /etc/firefox/pref/lastfm.js ] && rm -f /etc/firefox/pref/lastfm.js
+[ -e /etc/iceweasel/pref/lastfm.js ] && rm -f /etc/iceweasel/pref/lastfm.js
+[ -e /usr/share/services/lastfm.protocol ] && rm -f /usr/share/services/lastfm.protocol
+
+#DEBHELPER#

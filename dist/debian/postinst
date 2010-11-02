@@ -1,0 +1,37 @@
+#!/bin/sh
+
+for dir in /etc/mozilla-firefox/pref/ /etc/firefox/pref/ /etc/iceweasel/pref/
+do
+   if [ -e $dir ]
+   then
+	cat << EOF > $dir/lastfm.js
+// LAST.FM prefs for mozilla-firefox
+// This file will be overwritten on upgrade
+
+// protocol-handler for last.fm links
+pref("network.protocol-handler.app.lastfm","/usr/bin/last.fm");
+EOF
+
+   fi
+done
+
+
+if [ -e /usr/share/services ]
+then
+	cat << EOF2 > /usr/share/services/lastfm.protocol
+[Protocol]
+exec=/usr/bin/last.fm "%u"
+protocol=lastfm
+input=none
+output=none
+helper=true
+listing=
+reading=false
+writing=false
+makedir=false
+deleting=false
+EOF2
+
+fi
+
+#DEBHELPER#

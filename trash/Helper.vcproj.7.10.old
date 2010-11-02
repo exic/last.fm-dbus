@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<VisualStudioProject
+	ProjectType="Visual C++"
+	Version="7.10"
+	Name="LastFMHelper"
+	ProjectGUID="{91191191-31D4-4BD0-A3F0-DBC835B5B9DF}"
+	RootNamespace="lastfmscrobbler"
+	Keyword="MakeFileProj">
+	<Platforms>
+		<Platform
+			Name="Win32"/>
+	</Platforms>
+	<Configurations>
+		<Configuration
+			Name="Debug|Win32"
+			OutputDirectory="Debug"
+			IntermediateDirectory="Debug"
+			ConfigurationType="0">
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="qmake LastFMHelper.pro
+nmake debug"
+				ReBuildCommandLine="qmake LastFMHelper.pro
+nmake clean
+nmake debug"
+				CleanCommandLine="nmake clean"/>
+		</Configuration>
+		<Configuration
+			Name="Release|Win32"
+			OutputDirectory="Release"
+			IntermediateDirectory="Release"
+			ConfigurationType="0">
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="qmake LastFMHelper.pro
+nmake release"
+				ReBuildCommandLine="qmake LastFMHelper.pro
+nmake clean
+nmake release"
+				CleanCommandLine="nmake clean"/>
+		</Configuration>
+	</Configurations>
+	<References>
+	</References>
+	<Files>
+		<Filter
+			Name="Source Files"
+			Filter="cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx"
+			UniqueIdentifier="{4FC737F1-C7A5-4376-A066-2A32D752A2FF}">
+			<File
+				RelativePath=".\common.h">
+			</File>
+			<File
+				RelativePath=".\controlinterface.cpp">
+			</File>
+			<File
+				RelativePath=".\controlinterface.h">
+			</File>
+			<File
+				RelativePath=".\main.cpp">
+			</File>
+			<File
+				RelativePath=".\mediadeviceinterface.h">
+			</File>
+			<File
+				RelativePath=".\mediadevicewatcher.cpp">
+			</File>
+			<File
+				RelativePath=".\mediadevicewatcher.h">
+			</File>
+			<File
+				RelativePath=".\trackinfo.cpp">
+			</File>
+			<File
+				RelativePath=".\trackinfo.h">
+			</File>
+		</Filter>
+		<Filter
+			Name="Make files"
+			Filter="">
+			<File
+				RelativePath=".\LastFMHelper.pro">
+			</File>
+		</Filter>
+	</Files>
+	<Globals>
+	</Globals>
+</VisualStudioProject>

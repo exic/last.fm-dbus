@@ -1,0 +1,2 @@
+# lastfm includes its libraries
+lastfm: package-name-doesnt-match-sonames libLastFmTools1

@@ -1,0 +1,40 @@
+Last.fm from SVN
+================
+Last updated: 22-October-2007
+
+Windows
+-------
+You need to run qmake before opening LastFM.sln.
+You'll need the DirectSound SDK, and some other stuff.
+
+OS X
+----
+You need to run qmake before opening Last.fm.xcodeproj.
+You'll need to install XCode, even if you use a different editor.
+
+Linux
+-----
+Open LastFM.kdevelop or run: qmake && make.
+You'll need libfftw, libmad, taglib and asoundlib.
+
+To compile you need to install the Qt4 development packages and development
+packages for all the above packages. If you don't know what this means, you may
+want to beg someone from your distro to package Last.fm for you. We don't 
+support build problems due to lack of know how as we just don't have the man 
+power! We do support compile errors though.
+
+
+Troubleshooting
+===============
+Complain at the forum:
+
+    http://www.last.fm/forum/
+
+Or you can email me <max@last.fm>
+
+
+Building Packages
+=================
+You can run the scripts in dist from this directory.
+Please note, these scripts are not supported outside the company because
+frankly, we hardly understand them either.
