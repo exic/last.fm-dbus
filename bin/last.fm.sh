@@ -1,7 +1,12 @@
 #!/bin/sh
 # executes all *nix variants of Last.fm executable --mxcl
 
-RUNDIR=`dirname $0`
+ME=$0
+if [ -L "$ME" ]; then
+    ME=$(readlink $ME)
+fi
+RUNDIR=`dirname $ME`
+
 export LD_LIBRARY_PATH=$RUNDIR:$LD_LIBRARY_PATH
 export DYLD_LIBRARY_PATH=$RUNDIR:$DYLD_LIBRARY_PATH
 
