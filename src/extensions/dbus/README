@@ -1,0 +1,70 @@
+
+-=Last.fm DBus extension=-
+
+This is an extension to the Last.fm client that allows you to
+control the client's behavior over DBus.  The interfaces follow
+the 1.0 version of the MPRIS (Media Player Remote Interfacing
+Specification).  Last.fm will become accessible on your
+session bus at "org.mpris.lastfm" with objects "/", "/Player" and
+"/TrackList".  It's worth noting that as a streaming music player,
+Last.fm doesn't support all the optional features of MPRIS,
+such as seeking, going back, etc.  But the features supported are
+correctly reported in the MPRIS GetCaps (Capabilities) function.
+
+First thing to note: Qt is only compiled with DBus support
+on unix systems!  If you're not running a unix-based system
+(I'm unsure if OSX qualifies here), don't expect this 
+extension to work!
+
+This README was updated for version 2.0 of the plugin, which
+adds support for MPRIS 1.0.
+
+
+Installing
+----------
+
+Get and unpack the Last.fm application source code.
+
+Place the "dbus" folder in the src/extensions folder of the application
+
+Enter the dbus folder and execute "qmake dbusextension.pro; make".
+You're not actually building the whole lastfm app, you just need
+some headers to build the extension.
+
+If all goes well, you will have a "libext_dbusextension.so" in your 
+bin/extensions folder
+
+Copy this file to the extensions folder where Last.fm is installed.
+It should be a subfolder of where Last.fm keeps its support libraries.
+(Possibly /usr/lib/lastfm/extensions) If the lastfm folder exists,
+but not the extensions folder, you will need to create it.
+
+Run Last.fm
+
+To test, I used the MPRIS tester at
+http://www.qt-apps.org/content/show.php/MPRIS+Tester?content=85539
+The command-line tools "dbus-send" and "dbus-monitor" are also useful,
+as is the graphical tool "qdbusviewer", though that may be quirky.
+
+If the tests don't work, check your ~/.local/share/Last.fm/Last.fm.log
+to make sure the plugin is being loaded correctly
+
+
+If the plugin fails to build
+----------------------------
+
+This is probably because the plugin cannot find the libLastFmTools.so
+library.  Edit the dbusextension.pro file and find the line that
+resembles "LIBS += -L/usr/lib/lastfm".  Make sure this path goes to
+the correct location on your system.  Also on my Debian system I had
+to force the linker to use the specific file with -l:libLastFmTools.so.1
+
+
+Other things to worry about
+---------------------------
+
+The version of the Last.fm source you build with must be reasonably
+close to the version of Last.fm you are running.  I tested by building
+against and then running with 1.5.4.26862.
+
+-Ken Rossato, lastfm:tarsus4
