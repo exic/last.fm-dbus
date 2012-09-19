@@ -58,7 +58,7 @@ public:
     GetChecked(
         std::vector<CComponentInfo*>& vecChecked);
     
-    void WizardSelectUpdatesPage::GetMajorUpdateComponent( std::vector<CComponentInfo*>& vecToUpdate );
+    void GetMajorUpdateComponent( std::vector<CComponentInfo*>& vecToUpdate );
 
 public slots:
 

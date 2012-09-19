@@ -50,7 +50,7 @@ public:
         CAutoUpdater& updater,
         QWidget*      parent = NULL);
 
-    UpdateWizard::UpdateWizard( CComponentInfo* );
+    UpdateWizard( CComponentInfo* );
 
     bool shouldShow() const{ return m_showWizard; }
 
